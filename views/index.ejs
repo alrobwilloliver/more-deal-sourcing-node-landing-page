@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+	<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+	<script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400&display=swap" rel="stylesheet">
+	<title>More Deal Sourcing</title>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="row">
+				<img src="resources/img/white-logo.png" alt="More Deal Sourcing Logo" class="logo">
+				<ul class="main-nav ">
+					<li><a href="#features">WHAT WE DO</a></li>
+					<!-- <li><a href="#">Sign Up</a></li> -->
+					<li><a href="#investor">JOIN OUR EMAIL LIST</a></li>
+					<li><a href="#footer">Contact Us</a></li>
+				</ul>
+				<a class="mobile-nav-icon js--mobile-nav-icon">
+					<ion-icon name="menu"></ion-icon>
+				</a>
+			</div>
+		</nav>
+		<div class="hero-text-box">
+			<h1>We'll find the investment for you</h1>
+			<a href="#" class="btn btn-full js--scroll-to-investor">I'm an investor</a>
+			<!-- <a href="#" class="btn btn-ghost">I'm a deal sourcer</a> -->
+		</div>
+	</header>
+
+	<section class="features-section js--features-section" id="features">
+		<div class="row">
+			<h2>What we do</h2>
+			<p>Hello, we are More Deal Sourcing. We search and find property investment opportunities for prospective
+				investors.
+				<!-- We also support deal sourcers to find properties for investors with our online search finding
+				service. -->
+			</p>
+		</div>
+
+		<div class="row">
+			<div style="width: 70%; margin-left: 15%;">
+				<div style=" margin-top: 15px;">
+					<ion-icon class="icon-big" name="trending-up"></ion-icon>
+					<h3>High Return On Investments</h3>
+					<p class="long-copy">We provide reliable property investments with ROIs of at least
+						<strong>20&percnt;</strong>.</p>
+				</div>
+
+				<div style="margin-top: 15px;">
+					<ion-icon class="icon-big" name="search"></ion-icon>
+					<h3>We find it so you don't have to</h3>
+					<p class="long-copy">We understand that you want to save time finding high quality investments. We
+						take out the headache and find it for you&excl;</p>
+				</div>
+				<div style=" margin-top: 15px;">
+					<ion-icon class="icon-big" name="ios-text"></ion-icon>
+					<h3>Provide Expert Advice</h3>
+					<p class="long-copy">We stay up to date with rental and property market trends to provide quality
+						advice for any investor.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="investor-section js--investor-section" id="investor">
+		<div class="row">
+			<h2>Join Our Email List &ndash; Easy As 1, 2, 3</h2>
+		</div>
+
+		<div class="row">
+			<div class="col span-1-of-3 box">
+				<div>1</div>
+				<h3 style="float: right; margin-top: 5px;">Input and send us your details below</h3>
+			</div>
+			<div class="col span-1-of-3 box">
+				<div>2</div>
+				<h3 style="float: right; margin-top: 5px;">Receive Weekly Property Deal Updates</h3>
+			</div>
+			<div class="col span-1-of-3 box">
+				<div>3</div>
+				<h3 style="float: right; margin-top: 5px;">Contact Us About The Deals You Like</h3>
+			</div>
+		</div>
+		<form id="formAddUser" name="adduser" method="post">
+			<% if(locals.red || locals.message === 'Something went wrong! Please try again.') { %>
+			<div class="alert red" role="alert">
+				<%=locals.message%>
+			</div>
+			<% } else { %>
+			<div class="alert red" role="alert">
+				<%=locals.message%>
+			</div>
+			<% } %>
+			<div class="row">
+				<label for="inputUserName">Name:</label>
+				<input type="text" id="inputUserName" name="username" required />
+			</div>
+			<div class="row" style="padding-left: 2px;">
+				<label for="inputUserEmail">Email:</label>
+				<input type="text" id="inputUserEmail" name="useremail" required />
+			</div>
+			<button style="margin-top: 20px; padding: 5px;" id="btnSubmit" type="submit">Join Email List</button>
+		</form>
+	</section>
+
+	<!-- <section class="section-plans">
+			<div class="row">
+				<h2>Our Online Deal Sourcing Finding Service</h2>
+			</div>
+			<div class="row">
+				<div class="col span-1-of-3">
+					<div class="plan-box">
+						<div>
+							<h3>Starter</h3>
+							<p>&pound;50 per month</p>
+						</div>
+						<div>
+							<ul>
+								<li><ion-icon class="icon-small" name="trending-up"></ion-icon>Some info on the service</li>
+								<li><ion-icon class="icon-small" name="trending-up"></ion-icon>Some info on the service</li>
+								<li><ion-icon class="icon-small" name="trending-up"></ion-icon>Some info on the service</li>
+							</ul>
+						</div>
+						<a class="btn btn-ghost" href="#">Sign Up</a>
+					</div>
+				</div>
+				<div class="col span-1-of-3">
+					<div class="plan-box">
+						<div>
+							<h3>Premium</h3>
+							<p>&pound;200 per month</p>
+						</div>
+						<div>
+							<ul>
+								<li><ion-icon class="icon-small" name="trending-up"></ion-icon>Some info on the service</li>
+								<li><ion-icon class="icon-small" name="trending-up"></ion-icon>Some info on the service</li>
+								<li><ion-icon class="icon-small" name="trending-up"></ion-icon>Some info on the service</li>
+							</ul>
+						</div>
+						<a class="btn btn-full" href="#">Sign Up</a>
+					</div>
+				</div>
+				 <div class="row">
+					<div class="col span-3-of-3">
+						<h3>Input your search preferences and instantly find rental yield estimates</h3>
+						<img src="#" alt="An image of properties and their RIOs and yields">
+					</div>
+				</div> -->
+	<!-- </div>
+
+		</section> -->
+	<footer id="footer">
+
+		<div class="row">
+			<div class="col span-1-of-2">
+				<ul class="footer-nav">
+					<li>Contact: 07468841873</li>
+					<li>Email: alanoliver@moredealsourcing.com</li>
+				</ul>
+			</div>
+			<div class="col span-1-of-2">
+				<ul class="social-links">
+					<li><a href="#">
+							<ion-icon class="fb" name="logo-facebook">
+						</a></ion-icon>
+					</li>
+					<li><a href="#">
+							<ion-icon class="twitter" name="logo-twitter">
+						</a></ion-icon>
+					</li>
+					<li><a href="#">
+							<ion-icon class="insta" name="logo-instagram">
+						</a></ion-icon>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<p>Copyright &copy; 2020 More Deal Sourcing Ltd. All rights reserved.</p>
+		</div>
+
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="resources/js/script.js"></script>
+	<script src="vendors/js/jquery.waypoints.min.js"></script>
+</body>
+
+</html>
