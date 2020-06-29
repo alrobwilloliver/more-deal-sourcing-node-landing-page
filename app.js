@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const emailController = require('./controllers/emailController');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
@@ -37,9 +37,9 @@ const limiter = rateLimit({
 app.use('/', limiter)
 
 dotenv.config({ path: './config.env' });
-if (process.env.NODE_ENV === 'development') {
-    app.use(morgan('dev'));
-}
+// if (process.env.NODE_ENV === 'development') {
+//     app.use(morgan('dev'));
+// }
 
 const DB = process.env.DATABASE.replace('<PASSWORD>', process.env.DATABASE_PASSWORD);
 
