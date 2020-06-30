@@ -70,7 +70,7 @@ app.route('/').post(emailController.sendNewEmail);
 
 
 const port = 3000;
-app.listen(3000, () => {
-    console.log(`Connected to server on port ${port}`);
+app.listen(process.env.PORT || port, () => {
+    console.log(`Connected to server`);
 });
 
