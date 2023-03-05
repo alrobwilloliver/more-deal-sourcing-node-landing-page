@@ -3,4 +3,4 @@
 
 To view this go to the following urlL
 
-https://moredealsourcing.herokuapp.com/
+https://more-deal-sourcing.fly.dev
